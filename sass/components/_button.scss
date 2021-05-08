@@ -1,8 +1,3 @@
-.hero__button:hover,
-.hero__button:focus {
-  background-color: var(--button-current-color--);
-  color: var(--primary-title-color--);
-}
 .hero__button {
   color: var(--header-color--);
   background-color: var(--accent-color--);
@@ -20,6 +15,12 @@
   cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    background-color: var(--button-current-color--);
+    color: var(--primary-title-color--);
+  }
 }
 .filters__button {
   cursor: pointer;
@@ -40,9 +41,10 @@
   transition-property: color background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.filters__button:hover,
-.filters__button:focus {
-  background-color: var(--accent-color--);
-  color: var(--header-color--);
+
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color--);
+    color: var(--header-color--);
+  }
 }
